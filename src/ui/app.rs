@@ -503,8 +503,8 @@ fn map_key_to_action(code: KeyCode, modifiers: KeyModifiers, state: &AppState) -
         KeyCode::Char('k') | KeyCode::Up => Action::PrevAgent,
         KeyCode::Tab => Action::NextAgent,
 
-        // Left/Right arrows for focus navigation
-        KeyCode::Right => Action::FocusInput,
+        // Left/Right arrows and l for focus navigation
+        KeyCode::Right | KeyCode::Char('l') => Action::FocusInput,
         KeyCode::Left => Action::None, // Already on sidebar
 
         // Multi-selection
